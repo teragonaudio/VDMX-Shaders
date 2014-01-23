@@ -5,7 +5,6 @@ This repository contains assorted GLSL shaders for the VDMX VJ software.
 To install, run the following commands:
 
     $ cp ISF/* /Library/Graphics/ISF
-    $ cp glslCompModes/* ~/Library/Application\ Support/VDMX/glslCompModes
 
 
 License
