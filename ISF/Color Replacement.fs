@@ -43,14 +43,13 @@
 void main(void) {
   vec4 inPixel = IMG_THIS_PIXEL(inputImage);
   vec4 outPixel = inPixel;
-  float halfTolerance = tolerance / 2.0;
   
-  if(inPixel.x > (targetColor.x - halfTolerance) &&
-     inPixel.x < (targetColor.x + halfTolerance)) {
-    if(inPixel.y > (targetColor.y - halfTolerance) &&
-       inPixel.y < (targetColor.y + halfTolerance)) {
-      if(inPixel.z > (targetColor.z - halfTolerance) &&
-         inPixel.z < (targetColor.z + halfTolerance)) {
+  if(inPixel.x >= (targetColor.x - tolerance) &&
+     inPixel.x <= (targetColor.x + tolerance)) {
+    if(inPixel.y >= (targetColor.y - tolerance) &&
+       inPixel.y <= (targetColor.y + tolerance)) {
+      if(inPixel.z >= (targetColor.z - tolerance) &&
+         inPixel.z <= (targetColor.z + tolerance)) {
         outPixel.x = replacementColor.x;
         outPixel.y = replacementColor.y;
         outPixel.z = replacementColor.z;
