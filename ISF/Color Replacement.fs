@@ -34,7 +34,7 @@
       "TYPE": "float",
       "MIN": 0.0,
       "MAX": 1.0,
-      "DEFAULT": 0.1
+      "DEFAULT": 0.0
     }
   ]
 }
