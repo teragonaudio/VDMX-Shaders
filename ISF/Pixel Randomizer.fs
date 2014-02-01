@@ -1,6 +1,7 @@
 /*
 {
   "CREDIT": "by Sergey & Nik",
+  "DESCRIPTION": "Moves each pixel a randomized distance from its origin",
   "CATEGORIES": [
     "Distortion Effect"
   ],
@@ -11,6 +12,7 @@
     },
     {
       "NAME": "intensityX",
+      "LABEL": "Intensity X",
       "TYPE": "float",
       "MIN": 0.0,
       "MAX": 1.0,
@@ -18,6 +20,7 @@
     },
     {
       "NAME": "intensityY",
+      "LABEL": "Intensity Y",
       "TYPE": "float",
       "MIN": 0.0,
       "MAX": 1.0,
@@ -25,11 +28,13 @@
     },
     {
       "NAME": "randomizeX",
+      "LABEL": "Distort X",
       "TYPE": "bool",
       "DEFAULT": 0.0
     },
     {
       "NAME": "randomizeY",
+      "LABEL": "Distort Y",
       "TYPE": "bool",
       "DEFAULT": 1.0
     }

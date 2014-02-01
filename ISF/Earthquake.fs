@@ -1,6 +1,7 @@
 /*
 {
   "CREDIT": "by Sergey & Nik",
+  "DESCRIPTION": "Move all pixels by a random offset",
   "CATEGORIES": [
     "Geometry Adjustment"
   ],
@@ -11,6 +12,7 @@
     },
     {
       "NAME": "magnitude",
+      "LABEL": "Magnitude",
       "TYPE": "float",
       "MIN": 0.0,
       "MAX": 2.0,
@@ -18,6 +20,7 @@
     },
     {
       "NAME": "rotation",
+      "LABEL": "Rotation amount",
       "TYPE": "float",
       "MIN": 0.0,
       "MAX": 1.0,
@@ -25,6 +28,7 @@
     },
     {
       "NAME": "intensity",
+      "LABEL": "Intensity",
       "TYPE": "float",
       "MIN": 0.0,
       "MAX": 1.0,
