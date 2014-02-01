@@ -48,8 +48,8 @@ void main(void) {
   float yOffset = sin(TIME * 1.0 * cos(TIME * intensity) * rotation);
   float xOffset = cos(TIME * 1.0 * cos(TIME * intensity) * rotation);
 
-  uv.y += yOffset * offset * rand(vec2(PASSINDEX, TIME));
-  uv.x += xOffset * offset * rand(vec2(PASSINDEX, TIME));
+  uv.y += yOffset * offset * rand(vec2(yOffset, TIME));
+  uv.x += xOffset * offset * rand(vec2(xOffset, TIME));
 
   gl_FragColor = IMG_NORM_PIXEL(inputImage, uv);
 }
