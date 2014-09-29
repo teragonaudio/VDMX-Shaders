@@ -45,6 +45,7 @@ float rand(vec2 co) {
 
 void main(void) {
   vec4 inPixel = IMG_THIS_PIXEL(inputImage);
+  vec2 inPixelCoord = gl_FragCoord.xy / RENDERSIZE.xy;
   vec4 outPixel = inPixel;
 
   if(inPixel.r >= (targetColor.r - tolerance) &&
@@ -58,7 +59,8 @@ void main(void) {
           outPixel.g = rand(vec2(TIME, outPixel.r + outPixel.g + outPixel.b));
           outPixel.b = rand(vec2(TIME, outPixel.r + outPixel.g + outPixel.b));
         } else {
-          float outValue = rand(vec2(TIME, outPixel.r + outPixel.g + outPixel.b));
+          vec2 seed = vec2(TIME, outPixel.r + outPixel.g + outPixel.b + inPixelCoord.x * inPixelCoord.y);
+          float outValue = rand(seed);
           outPixel.r = outValue;
           outPixel.g = outValue;
           outPixel.b = outValue;
