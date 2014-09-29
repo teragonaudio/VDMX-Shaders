@@ -45,7 +45,7 @@
 }
 */
 
-varying vec2 offsets[1];
+vec2 offsets[1];
 
 void main(void) {
   vec4 inPixel = IMG_THIS_PIXEL(inputImage);
