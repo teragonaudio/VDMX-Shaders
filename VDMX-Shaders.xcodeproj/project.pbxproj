@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		24DFA69719D9C129000BFEE2 /* Color Rounder.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = "Color Rounder.fs"; path = "ISF/Color Rounder.fs"; sourceTree = "<group>"; };
 		24F36C06189D60EB007D2321 /* Acidify.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Acidify.fs; path = ISF/Acidify.fs; sourceTree = "<group>"; };
 		24F36C07189D60EB007D2321 /* Color Replacement.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = "Color Replacement.fs"; path = "ISF/Color Replacement.fs"; sourceTree = "<group>"; };
 		24F36C08189D60EB007D2321 /* Earthquake.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Earthquake.fs; path = ISF/Earthquake.fs; sourceTree = "<group>"; };
@@ -19,6 +20,7 @@
 			children = (
 				24F36C06189D60EB007D2321 /* Acidify.fs */,
 				24F36C07189D60EB007D2321 /* Color Replacement.fs */,
+				24DFA69719D9C129000BFEE2 /* Color Rounder.fs */,
 				24F36C08189D60EB007D2321 /* Earthquake.fs */,
 				24F36C09189D60EB007D2321 /* Pixel Randomizer.fs */,
 			);
