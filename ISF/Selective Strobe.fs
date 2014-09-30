@@ -28,13 +28,24 @@
         0.0,
         1.0
       ]
+    },
+    {
+      "NAME": "strobeColor",
+      "LABEL": "Strobe Color",
+      "TYPE": "color",
+      "DEFAULT": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
     }
   ]
 }
 */
 
 float rand(vec2 co) {
-  return fract(sin(dot(co.xy, vec2(12.9898,78.233))) * 43758.5453);
+  return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453);
 }
 
 void main(void) {
@@ -48,9 +59,9 @@ void main(void) {
       if (inPixel.b > (targetColor.b - tolerance) &&
           inPixel.b <= (targetColor.b + tolerance)) {
         float pixelValue = rand(vec2(TIME, 1.0));
-        outPixel.r = pixelValue;
-        outPixel.g = pixelValue;
-        outPixel.b = pixelValue;
+        outPixel.r = pixelValue * strobeColor.r;
+        outPixel.g = pixelValue * strobeColor.g;
+        outPixel.b = pixelValue * strobeColor.b;
       }
     }
   }
