@@ -41,11 +41,11 @@ void main(void) {
   vec4 inPixel = IMG_THIS_PIXEL(inputImage);
   vec4 outPixel = inPixel;
 
-  if (inPixel.r >= (targetColor.r - tolerance) &&
+  if (inPixel.r > (targetColor.r - tolerance) &&
       inPixel.r <= (targetColor.r + tolerance)) {
-    if (inPixel.g >= (targetColor.g - tolerance) &&
+    if (inPixel.g > (targetColor.g - tolerance) &&
         inPixel.g <= (targetColor.g + tolerance)) {
-      if (inPixel.b >= (targetColor.b - tolerance) &&
+      if (inPixel.b > (targetColor.b - tolerance) &&
           inPixel.b <= (targetColor.b + tolerance)) {
         float pixelValue = rand(vec2(TIME, 1.0));
         outPixel.r = pixelValue;

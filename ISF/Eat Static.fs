@@ -48,13 +48,13 @@ void main(void) {
   vec2 inPixelCoord = gl_FragCoord.xy / RENDERSIZE.xy;
   vec4 outPixel = inPixel;
 
-  if(inPixel.r >= (targetColor.r - tolerance) &&
-     inPixel.r <= (targetColor.r + tolerance)) {
-    if(inPixel.g >= (targetColor.g - tolerance) &&
-       inPixel.g <= (targetColor.g + tolerance)) {
-      if(inPixel.b >= (targetColor.b - tolerance) &&
-         inPixel.b <= (targetColor.b + tolerance)) {
-        if(colorStatic) {
+  if (inPixel.r > (targetColor.r - tolerance) &&
+      inPixel.r <= (targetColor.r + tolerance)) {
+    if (inPixel.g > (targetColor.g - tolerance) &&
+        inPixel.g <= (targetColor.g + tolerance)) {
+      if (inPixel.b > (targetColor.b - tolerance) &&
+          inPixel.b <= (targetColor.b + tolerance)) {
+        if (colorStatic) {
           outPixel.r = rand(vec2(TIME, outPixel.r + outPixel.g + outPixel.b));
           outPixel.g = rand(vec2(TIME, outPixel.r + outPixel.g + outPixel.b));
           outPixel.b = rand(vec2(TIME, outPixel.r + outPixel.g + outPixel.b));
