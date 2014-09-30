@@ -59,11 +59,11 @@ void main(void) {
           outPixel.g = rand(vec2(TIME, outPixel.r + outPixel.g + outPixel.b));
           outPixel.b = rand(vec2(TIME, outPixel.r + outPixel.g + outPixel.b));
         } else {
-          vec2 seed = vec2(TIME, outPixel.r + outPixel.g + outPixel.b + inPixelCoord.x * inPixelCoord.y);
-          float outValue = rand(seed);
-          outPixel.r = outValue;
-          outPixel.g = outValue;
-          outPixel.b = outValue;
+          float staticValue = rand(vec2(TIME, outPixel.r + outPixel.g + outPixel.b +
+                                        (inPixelCoord.x * inPixelCoord.y)));
+          outPixel.r = staticValue;
+          outPixel.g = staticValue;
+          outPixel.b = staticValue;
         }
       }
     }
