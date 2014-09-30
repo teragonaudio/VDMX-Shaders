@@ -55,12 +55,11 @@ void main(void) {
       if (inPixel.b > (targetColor.b - tolerance) &&
           inPixel.b <= (targetColor.b + tolerance)) {
         if (colorStatic) {
-          outPixel.r = rand(vec2(TIME, outPixel.r + outPixel.g + outPixel.b));
-          outPixel.g = rand(vec2(TIME, outPixel.r + outPixel.g + outPixel.b));
-          outPixel.b = rand(vec2(TIME, outPixel.r + outPixel.g + outPixel.b));
+          outPixel.r = rand(vec2(TIME, inPixel.r));
+          outPixel.g = rand(vec2(TIME, inPixel.g));
+          outPixel.b = rand(vec2(TIME, inPixel.b));
         } else {
-          float staticValue = rand(vec2(TIME, outPixel.r + outPixel.g + outPixel.b +
-                                        (inPixelCoord.x * inPixelCoord.y)));
+          float staticValue = rand(vec2(TIME, inPixelCoord.x + inPixelCoord.y));
           outPixel.r = staticValue;
           outPixel.g = staticValue;
           outPixel.b = staticValue;
