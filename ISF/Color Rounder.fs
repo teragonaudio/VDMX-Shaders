@@ -11,6 +11,14 @@
       "TYPE": "image"
     },
     {
+      "NAME": "wetAmount",
+      "LABEL": "Wet-dry mix",
+      "TYPE": "float",
+      "MIN": 0.0,
+      "MAX": 1.0,
+      "DEFAULT": 0.0
+    },
+    {
       "NAME": "tolerance",
       "LABEL": "Color detection tolerance",
       "TYPE": "float",
@@ -30,25 +38,31 @@
 
 void main(void) {
   vec4 inPixel = IMG_THIS_PIXEL(inputImage);
-  vec4 outPixel = inPixel;
+  vec4 tempPixel = inPixel;
+  float dryAmount = 1.0 - wetAmount;
 
-  if(inPixel.r >= tolerance) {
-    outPixel.r = invert ? 0.0 : 1.0;
+  if (inPixel.r >= tolerance) {
+    tempPixel.r = invert ? 0.0 : 1.0;
   } else {
-    outPixel.r = invert ? 1.0 : 0.0;
+    tempPixel.r = invert ? 1.0 : 0.0;
   }
 
-  if(inPixel.g >= tolerance) {
-    outPixel.g = invert ? 0.0 : 1.0;
+  if (inPixel.g >= tolerance) {
+    tempPixel.g = invert ? 0.0 : 1.0;
   } else {
-    outPixel.g = invert ? 1.0 : 0.0;
+    tempPixel.g = invert ? 1.0 : 0.0;
   }
 
-  if(inPixel.b >= tolerance) {
-    outPixel.b = invert ? 0.0 : 1.0;
+  if (inPixel.b >= tolerance) {
+    tempPixel.b = invert ? 0.0 : 1.0;
   } else {
-    outPixel.b = invert ? 1.0 : 0.0;
+    tempPixel.b = invert ? 1.0 : 0.0;
   }
+
+  vec4 outPixel;
+  outPixel.r = (inPixel.r * dryAmount) + (tempPixel.r * wetAmount);
+  outPixel.g = (inPixel.g * dryAmount) + (tempPixel.g * wetAmount);
+  outPixel.b = (inPixel.b * dryAmount) + (tempPixel.b * wetAmount);
 
   gl_FragColor = outPixel;
 }
