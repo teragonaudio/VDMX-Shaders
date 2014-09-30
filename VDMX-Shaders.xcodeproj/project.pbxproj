@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		2499382619DA7579001CE76D /* Channel Shifter.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = "Channel Shifter.fs"; path = "ISF/Channel Shifter.fs"; sourceTree = "<group>"; };
 		24DFA69719D9C129000BFEE2 /* Color Rounder.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = "Color Rounder.fs"; path = "ISF/Color Rounder.fs"; sourceTree = "<group>"; };
 		24DFA69819D9C74A000BFEE2 /* Eat Static.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = "Eat Static.fs"; path = "ISF/Eat Static.fs"; sourceTree = "<group>"; };
 		24DFA69919D9C8EC000BFEE2 /* Selective Strobe.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = "Selective Strobe.fs"; path = "ISF/Selective Strobe.fs"; sourceTree = "<group>"; };
@@ -21,6 +22,7 @@
 			isa = PBXGroup;
 			children = (
 				24F36C06189D60EB007D2321 /* Acidify.fs */,
+				2499382619DA7579001CE76D /* Channel Shifter.fs */,
 				24F36C07189D60EB007D2321 /* Color Replacement.fs */,
 				24DFA69719D9C129000BFEE2 /* Color Rounder.fs */,
 				24F36C08189D60EB007D2321 /* Earthquake.fs */,
