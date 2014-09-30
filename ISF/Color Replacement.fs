@@ -15,9 +15,9 @@
       "LABEL": "Target Color",
       "TYPE": "color",
       "DEFAULT": [
-        0.0,
-        0.0,
-        0.0,
+        1.0,
+        1.0,
+        1.0,
         1.0
       ]
     },
